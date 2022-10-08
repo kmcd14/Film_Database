@@ -1,0 +1,5 @@
+SELECT g.genrename, COUNT(f.filmgenreid) as 'count(*)' FROM genre g
+INNER JOIN film f
+ON g.genreid = f.filmgenreid
+GROUP BY g.genrename
+ORDER BY g.genrename;

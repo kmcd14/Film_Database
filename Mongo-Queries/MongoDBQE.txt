@@ -1,0 +1,1 @@
+db.employees.aggregate([{$project: {_id: 0, 'Letters in Longest Name':{$strLenCP: '$name'}}}, {$sort: {'Letters in Longest Name':-1}}, {$limit: 1}])

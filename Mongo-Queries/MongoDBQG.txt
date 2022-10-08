@@ -1,0 +1,1 @@
+db.employees.aggregate([{$group: {_id: null, 'roundedSal':{$avg: '$salary'}}}, {$project: {'roundedSal': {$round: ['$roundedSal', 2]}}}])

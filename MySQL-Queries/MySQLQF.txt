@@ -1,0 +1,7 @@
+SELECT d.directorname, l.language FROM director d
+INNER JOIN film f
+ON d.directorid = f.filmdirectorid
+INNER JOIN language l
+ON l.languageid = f.filmlanguageid
+WHERE language NOT LIKE 'English'
+ORDER BY directorname;

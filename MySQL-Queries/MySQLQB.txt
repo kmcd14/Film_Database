@@ -1,0 +1,9 @@
+SELECT c.certificate, f.filmname FROM film f
+INNER JOIN certificate c
+ON f.filmcertificateid = c.certificateid
+INNER JOIN filmcast fc
+ON f.filmid = fc.castfilmid
+INNER JOIN actor a
+ON fc.castactorid = a.actorid 
+WHERE a.actorname = 'Temuera Morrison'
+order by filmname;
